@@ -1,19 +1,26 @@
 // stringFunctions.js
 
+const _ = require('lodash');
+const validator = require('validator');
+
 function concatenate(str1, str2) {
-    return str1 + str2;
+    return _.trim(str1) + _.trim(str2);
 }
 
 function toUpperCase(str) {
-    return str.toUpperCase();
+    return _.toUpper(str);
 }
 
 function toLowerCase(str) {
-    return str.toLowerCase();
+    return _.toLower(str);
 }
 
 function trimSpaces(str) {
-    return str.trim();
+    return _.trim(str);
+}
+
+function isEmail(str) {
+    return validator.isEmail(str);
 }
 
 module.exports = {
@@ -21,4 +28,5 @@ module.exports = {
     toUpperCase,
     toLowerCase,
     trimSpaces,
+    isEmail,
 };

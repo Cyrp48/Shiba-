@@ -12,7 +12,7 @@
 #### Installation
 
 ```bash
-npm install shiba
+npm install shibal
 ```
 
 #### Usage
